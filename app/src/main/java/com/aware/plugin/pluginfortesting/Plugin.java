@@ -96,19 +96,37 @@ public class Plugin extends Aware_Plugin {
             if (intent.getAction().equals(Applications.ACTION_AWARE_APPLICATIONS_FOREGROUND)) {
                 Log.d("UNLOCK", "data comes");
                 //get data!!!
-                Cursor cursor = context.getContentResolver().query(Applications_Foreground.CONTENT_URI, null, null, null, Applications_Foreground.TIMESTAMP + " DESC LIMIT 1");
+                Cursor AppCursor = context.getContentResolver().query(Applications_Foreground.CONTENT_URI, null, null, null, Applications_Foreground.TIMESTAMP + " DESC LIMIT 1");
+
+                if (AppCursor != null && AppCursor.moveToFirst()) {
+
+                    String application = AppCursor.getString(AppCursor.getColumnIndex(Applications_Foreground.PACKAGE_NAME));
+
+                    Log.d("UNLOCK","application = "+ application);
+                }
+                if (AppCursor != null && !AppCursor.isClosed())
+                {
+                    AppCursor.close();
+                }
+
+
+                Cursor cursor = context.getContentResolver().query(Uri.parse("content://io.github.cluo29.contextdatareading.provider.battery/battery"),
+                        null, null, null, "timestamp" + " DESC LIMIT 1");
 
                 if (cursor != null && cursor.moveToFirst()) {
 
-                    String application = cursor.getString(cursor.getColumnIndex(Applications_Foreground.PACKAGE_NAME));
+                    int batteryLevel = cursor.getInt(cursor.getColumnIndex("battery_level"));
 
-                    Log.d("UNLOCK","application = "+ application);
+                    Log.d("UNLOCK","batteryLevel = "+ batteryLevel);
                 }
                 if (cursor != null && !cursor.isClosed())
                 {
                     cursor.close();
                 }
+
             }
+
+
 
         }
     }

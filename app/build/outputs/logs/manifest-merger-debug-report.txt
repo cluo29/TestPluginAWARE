@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:1:1-30:12
+ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:1:1-33:12
 	package
 		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:2:5-48
 		INJECTED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml
@@ -53,13 +53,21 @@ ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidMan
 MERGED from [com.awareframework:aware-core:3.9.8] /Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/AndroidManifest.xml:46:5-68
 	android:name
 		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:13:22-65
+uses-permission#io.github.cluo29.contextdatareading.WRITE_CONTEXT_DATA
+ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:14:5-94
+	android:name
+		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:14:22-91
+uses-permission#io.github.cluo29.contextdatareading.READ_CONTEXT_DATA
+ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:15:5-93
+	android:name
+		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:15:22-90
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:14:5-80
+ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:17:5-80
 MERGED from [com.awareframework:aware-core:3.9.8] /Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/AndroidManifest.xml:47:5-81
 	android:name
-		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:14:22-78
+		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:17:22-78
 application
-ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:16:5-28:19
+ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:19:5-31:19
 MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] /Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services:8.4.0] /Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/8.4.0/AndroidManifest.xml:19:5-20
@@ -159,38 +167,38 @@ MERGED from [com.android.support:support-v4:23.1.1] /Users/Comet/Documents/devel
 MERGED from [com.android.support:cardview-v7:23.1.1] /Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.1.1/AndroidManifest.xml:22:5-20
 MERGED from [com.awareframework:aware-core:3.9.8] /Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/AndroidManifest.xml:53:5-378:19
 	android:label
-		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:16:45-77
+		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:19:45-77
 	android:hardwareAccelerated
 		ADDED from [com.awareframework:aware-core:3.9.8] /Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/AndroidManifest.xml:54:9-43
 	android:allowBackup
-		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:16:18-44
+		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:19:18-44
 	android:icon
-		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:17:9-45
+		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:20:9-45
 		REJECTED from [com.awareframework:aware-core:3.9.8] /Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/AndroidManifest.xml:55:9-51
 	android:theme
-		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:18:9-43
+		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:21:9-43
 		REJECTED from [com.awareframework:aware-core:3.9.8] /Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/AndroidManifest.xml:57:9-43
 	tools:replace
-		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:19:9-52
+		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:22:9-52
 service#com.aware.plugin.pluginfortesting.Plugin
-ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:21:9-100
+ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:24:9-100
 	android:exported
-		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:21:74-97
+		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:24:74-97
 	android:name
-		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:21:18-73
+		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:24:18-73
 provider#com.aware.plugin.pluginfortesting.Provider
-ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:22:9-26:69
+ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:25:9-29:69
 	android:readPermission
-		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:25:13-65
+		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:28:13-65
 	android:authorities
-		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:23:13-77
+		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:26:13-77
 		INJECTED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml
 	android:exported
-		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:24:13-36
+		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:27:13-36
 	android:name
-		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:22:19-76
+		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:25:19-76
 	android:writePermission
-		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:26:13-67
+		ADDED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml:29:13-67
 uses-sdk
 INJECTED from /Users/Comet/Documents/developments/TestAWARE/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
