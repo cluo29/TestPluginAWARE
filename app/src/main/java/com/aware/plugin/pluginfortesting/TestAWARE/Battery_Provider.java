@@ -2,6 +2,7 @@ package com.aware.plugin.pluginfortesting.TestAWARE;
 
 /**
  * Created by Comet on 29/04/16.
+ * should put this in a lib!!!! But it works if we don't~~~~
  */
 public class Battery_Provider {
     public static String AUTHORITY = "io.github.cluo29.contextdatareading.provider.battery";
