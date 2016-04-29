@@ -32,12 +32,12 @@
         "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/res/drawable-xhdpi/ic_action_light_active.png"
     },
     {
-        "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png",
-        "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_dark_pressed.9.png"
-    },
-    {
         "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
         "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xhdpi/abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_plus_signin_btn_icon_dark_pressed.9.png",
+        "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-xhdpi/common_plus_signin_btn_icon_dark_pressed.9.png"
     },
     {
         "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_action_accelerometer.png",

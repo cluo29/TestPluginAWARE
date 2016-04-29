@@ -672,12 +672,12 @@
         "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/res/drawable-mdpi/ic_action_gyroscope_active.png"
     },
     {
-        "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_pressed.9.png",
-        "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_dark_pressed.9.png"
-    },
-    {
         "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_action_aware_studies.png",
         "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/res/drawable-mdpi/ic_action_aware_studies.png"
+    },
+    {
+        "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_pressed.9.png",
+        "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_google_signin_btn_text_dark_pressed.9.png"
     },
     {
         "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_action_gyroscope.png",

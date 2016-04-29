@@ -15,6 +15,9 @@ import com.aware.Applications;
 import com.aware.providers.Applications_Provider.Applications_Foreground;
 import com.aware.utils.Aware_Plugin;
 import com.aware.plugin.pluginfortesting.Provider.Unlock_Monitor_Data;
+
+import com.aware.plugin.pluginfortesting.TestAWARE.Battery_Provider.Battery_Data;
+
 //Chu: add my two here
 
 
@@ -110,12 +113,12 @@ public class Plugin extends Aware_Plugin {
                 }
 
 
-                Cursor cursor = context.getContentResolver().query(Uri.parse("content://io.github.cluo29.contextdatareading.provider.battery/battery"),
-                        null, null, null, "timestamp" + " DESC LIMIT 1");
+                Cursor cursor = context.getContentResolver().query(Uri.parse(Battery_Data.CONTENT_URI_STRING),
+                        null, null, null, Battery_Data.TIMESTAMP + " DESC LIMIT 1");
 
                 if (cursor != null && cursor.moveToFirst()) {
 
-                    int batteryLevel = cursor.getInt(cursor.getColumnIndex("battery_level"));
+                    int batteryLevel = cursor.getInt(cursor.getColumnIndex(Battery_Data.LEVEL));
 
                     Log.d("UNLOCK","batteryLevel = "+ batteryLevel);
                 }

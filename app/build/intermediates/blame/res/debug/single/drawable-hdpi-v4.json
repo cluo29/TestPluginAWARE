@@ -32,12 +32,12 @@
         "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/drawable-hdpi/powered_by_google_dark.png"
     },
     {
-        "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_media_route_disabled_mono_dark.png",
-        "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_media_route_disabled_mono_dark.png"
-    },
-    {
         "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_esm.png",
         "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/res/drawable-hdpi/ic_action_esm.png"
+    },
+    {
+        "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_media_route_disabled_mono_dark.png",
+        "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_media_route_disabled_mono_dark.png"
     },
     {
         "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_plugin_settings.png",
@@ -360,12 +360,12 @@
         "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_play_dark.png"
     },
     {
-        "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_aware_sensors.png",
-        "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/res/drawable-hdpi/ic_action_aware_sensors.png"
-    },
-    {
         "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_media_route_on_1_mono_dark.png",
         "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_media_route_on_1_mono_dark.png"
+    },
+    {
+        "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_aware_sensors.png",
+        "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/res/drawable-hdpi/ic_action_aware_sensors.png"
     },
     {
         "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_proximity_active.png",
@@ -588,12 +588,12 @@
         "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-hdpi/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_applications_active.png",
-        "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/res/drawable-hdpi/ic_action_applications_active.png"
-    },
-    {
         "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_aware_studies.png",
         "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/res/drawable-hdpi/ic_action_aware_studies.png"
+    },
+    {
+        "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_applications_active.png",
+        "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/res/drawable-hdpi/ic_action_applications_active.png"
     },
     {
         "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_battery.png",
