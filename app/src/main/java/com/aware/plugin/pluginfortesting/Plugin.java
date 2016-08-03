@@ -16,7 +16,7 @@ import com.aware.providers.Applications_Provider.Applications_Foreground;
 import com.aware.utils.Aware_Plugin;
 import com.aware.plugin.pluginfortesting.Provider.Unlock_Monitor_Data;
 
-import com.aware.plugin.pluginfortesting.TestAWARE.Battery_Provider.Battery_Data;
+import com.aware.plugin.pluginfortesting.historicalProviders.Battery_Provider.Battery_Data;
 
 //Chu: add my two here
 

@@ -8,12 +8,12 @@
         "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/res/drawable-mdpi/ic_launcher_aware.png"
     },
     {
-        "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_action_magnetometer.png",
-        "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/res/drawable-mdpi/ic_action_magnetometer.png"
-    },
-    {
         "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_plus_signin_btn_text_dark_disabled.9.png",
         "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-mdpi/common_plus_signin_btn_text_dark_disabled.9.png"
+    },
+    {
+        "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_action_magnetometer.png",
+        "source": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/res/drawable-mdpi/ic_action_magnetometer.png"
     },
     {
         "merged": "/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_action_nav_placeholder.png",

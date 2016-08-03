@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/Users/Comet/.gradle/caches/modules-2/files-2.1/com.koushikdutta.async/androidasync/2.1.6/e3d5f6ab2003e31f2cf5ea61b4731a21e9517935/androidasync-2.1.6.jar"
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="e3d5f6ab2003e31f2cf5ea61b4731a21e9517935">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/androidasync-2.1.6_08cc39a06a2fb601373aa8b6c2b77a6bb5a02d3f.jar" />
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_63d56c0c1bda11b2a62fdde2cc2299e4443b7f25.jar" />
     </item>
     <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/jars/classes.jar"
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.1.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="551e78f21acf69ebfb489c0e79647824c838013e">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-cast-8.4.0_a6f41d89da1ec71d500270d644846e5bad1f427c.jar" />
+        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.1.1_4b2d9b2fce365219224a04b035e89a9be15662e4.jar" />
     </item>
     <item
         jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/8.4.0/jars/classes.jar"
@@ -23,67 +23,11 @@
         <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-games-8.4.0_a2397371712d5de914c035d2125b6db3d092caf3.jar" />
     </item>
     <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.4.0/jars/classes.jar"
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-measurement-8.4.0_7788f7a12d9d0ee8161e64042cf319a9c992e123.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_2134324239dc682477aba8a2c05ece7230cb2fa6.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_63d56c0c1bda11b2a62fdde2cc2299e4443b7f25.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="966e5771a5a2ebfb31bf00d7cd6cd2546d245517">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-8.4.0_3391aee4a16577313da60ccd7e260cee561ddb8f.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="b36f30ac5ee5d5214f4b1e2ac49f11889d58e71a">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-drive-8.4.0_e1d5cd132f1960d7953a1b6b439d7bcd160b959c.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/libs/internal_impl-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0_bfd0960b2cffa79a1ec4365e20ccd4f33190fe4e.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="e167a34eaca0b31704212f43f9576ea84e05046f">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wearable-8.4.0_ccc249df61984dc00eb5c1bf3982ab442ab2bd9b.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_ba5fc15eb337d7ec3f086423e756af32cfaed1f0.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="dfecc4d835cdabcdecf7e95f0d20a3ef1e9d8ef4">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-vision-8.4.0_36cab76a1a2bf2e7d84abe54544c5bb2936f1435.jar" />
+        sha1="f2df436a8f02ce7e4d7d209671fc45f97c470f0e">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wallet-8.4.0_55c9dcb65bfd78517fe163c7d4e954b5391c1d79.jar" />
     </item>
     <item
         jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/8.4.0/jars/classes.jar"
@@ -93,11 +37,11 @@
         <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-safetynet-8.4.0_434ad1d45ee2b99d04c978513002998a5179e8d2.jar" />
     </item>
     <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/jars/classes.jar"
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-8.4.0_faa8b2f584f0b34b9eba5fc15280c8b20a5f25a7.jar" />
+        sha1="b5e7892fb0708e792e0e933c4c0a0ca0ac7831fb">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-8.4.0_b243cca89a334525a42eee11545f2503813dfc3d.jar" />
     </item>
     <item
         jar="/Users/Comet/.gradle/caches/modules-2/files-2.1/com.koushikdutta.ion/ion/2.1.6/cd55ef3ba6d8b62838b658ba2507b019dffb3a08/ion-2.1.6.jar"
@@ -107,25 +51,18 @@
         <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/ion-2.1.6_890b5f3ef790444b8d56a4d4a671392fa09ee3e3.jar" />
     </item>
     <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/jars/classes.jar"
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="b5e7892fb0708e792e0e933c4c0a0ca0ac7831fb">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-8.4.0_b243cca89a334525a42eee11545f2503813dfc3d.jar" />
+        sha1="24b3c807aad3a2e5bb97f36fb295645d7b677741">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.awareframework-aware-core-3.9.8_afbc36faefdcf01f5e7591fc4e1948922ed986fe.jar" />
     </item>
     <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/classes.jar"
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/jars/libs/mqtt-client-0.4.0.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.android.support-mediarouter-v7-23.0.0_e790ad03c1cac3a13b76046fbdace79b5def7329.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-analytics-8.4.0_3c6fed865161d7b5fecf827e69ab8a81da7da06b.jar" />
+        sha1="02315d1759d01e52495e040e6e538aaa2e91c7f6">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/mqtt-client-0.4.0_01ffb059b044dd5445a25e080b4697219ad1a8a5.jar" />
     </item>
     <item
         jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/8.4.0/jars/classes.jar"
@@ -135,11 +72,109 @@
         <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-identity-8.4.0_bad725b248bc8326411dd0bd64b3910af349b79e.jar" />
     </item>
     <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/jars/classes.jar"
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="f2df436a8f02ce7e4d7d209671fc45f97c470f0e">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wallet-8.4.0_55c9dcb65bfd78517fe163c7d4e954b5391c1d79.jar" />
+        sha1="966e5771a5a2ebfb31bf00d7cd6cd2546d245517">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-8.4.0_3391aee4a16577313da60ccd7e260cee561ddb8f.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="08d34b2d135c1cc96ab506fd8bf6916d1e2f391a">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-panorama-8.4.0_8d8a76e6f31fb4565a904d09fc40bee7d3f7381f.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.4.0_483085ac3abf42ca7827ff1c876827e4152ec439.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-8.4.0_dfa10c33efef628cd7d8e23112a78c9861a1eb01.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_ba5fc15eb337d7ec3f086423e756af32cfaed1f0.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/.gradle/caches/modules-2/files-2.1/com.koushikdutta.async/androidasync/2.1.6/e3d5f6ab2003e31f2cf5ea61b4731a21e9517935/androidasync-2.1.6.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e3d5f6ab2003e31f2cf5ea61b4731a21e9517935">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/androidasync-2.1.6_08cc39a06a2fb601373aa8b6c2b77a6bb5a02d3f.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e167a34eaca0b31704212f43f9576ea84e05046f">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wearable-8.4.0_ccc249df61984dc00eb5c1bf3982ab442ab2bd9b.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0_bfd0960b2cffa79a1ec4365e20ccd4f33190fe4e.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="dfecc4d835cdabcdecf7e95f0d20a3ef1e9d8ef4">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-vision-8.4.0_36cab76a1a2bf2e7d84abe54544c5bb2936f1435.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="9cad249cf62751a323d9af568caf12284b7d6062">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-nearby-8.4.0_bd8ae138636e749659a307a9dc4c96087e650ca7.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appindexing-8.4.0_d5872764778ecf12fe35d883ec95f8e7c12a0daa.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.android.support-mediarouter-v7-23.0.0_e790ad03c1cac3a13b76046fbdace79b5def7329.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-8.4.0_faa8b2f584f0b34b9eba5fc15280c8b20a5f25a7.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="551e78f21acf69ebfb489c0e79647824c838013e">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-cast-8.4.0_a6f41d89da1ec71d500270d644846e5bad1f427c.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-8.4.0_834aa68d1ff771beb4ef993d3350fa7511ecc1c4.jar" />
     </item>
     <item
         jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/8.4.0/jars/classes.jar"
@@ -156,39 +191,11 @@
         <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-plus-8.4.0_5bc5547b4fa595d66f2c284f77e5c4b560a1c3b5.jar" />
     </item>
     <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.4.0/jars/classes.jar"
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="04de44f90606c77f3b28cf44861f306290505aac">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-8.4.0_834aa68d1ff771beb4ef993d3350fa7511ecc1c4.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-8.4.0_dfa10c33efef628cd7d8e23112a78c9861a1eb01.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="9cad249cf62751a323d9af568caf12284b7d6062">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-nearby-8.4.0_bd8ae138636e749659a307a9dc4c96087e650ca7.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="08d34b2d135c1cc96ab506fd8bf6916d1e2f391a">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-panorama-8.4.0_8d8a76e6f31fb4565a904d09fc40bee7d3f7381f.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="c54246475c1bb64ac6857d1320364bfbfeda2c46">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-fitness-8.4.0_d4fb6b0c3a1a5e954daa749579401da35605a5d1.jar" />
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_c35353106b0fe09e6a5a2c14ad503fc8490fe513.jar" />
     </item>
     <item
         jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/8.4.0/jars/classes.jar"
@@ -198,41 +205,6 @@
         <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appinvite-8.4.0_0492df6cc1732f08aca9b93d513bece83b5c94c8.jar" />
     </item>
     <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appindexing-8.4.0_d5872764778ecf12fe35d883ec95f8e7c12a0daa.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.4.0_483085ac3abf42ca7827ff1c876827e4152ec439.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="24b3c807aad3a2e5bb97f36fb295645d7b677741">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.awareframework-aware-core-3.9.8_afbc36faefdcf01f5e7591fc4e1948922ed986fe.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.1.1_4b2d9b2fce365219224a04b035e89a9be15662e4.jar" />
-    </item>
-    <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_c35353106b0fe09e6a5a2c14ad503fc8490fe513.jar" />
-    </item>
-    <item
         jar="/Users/Comet/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
         jumboMode="false"
         revision="23.0.2"
@@ -240,11 +212,39 @@
         <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/gson-2.3_35f9c7d08355d1fb52d912650c654f55e41eedb3.jar" />
     </item>
     <item
-        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.awareframework/aware-core/3.9.8/jars/libs/mqtt-client-0.4.0.jar"
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="02315d1759d01e52495e040e6e538aaa2e91c7f6">
-        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/mqtt-client-0.4.0_01ffb059b044dd5445a25e080b4697219ad1a8a5.jar" />
+        sha1="c54246475c1bb64ac6857d1320364bfbfeda2c46">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-fitness-8.4.0_d4fb6b0c3a1a5e954daa749579401da35605a5d1.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-measurement-8.4.0_7788f7a12d9d0ee8161e64042cf319a9c992e123.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_2134324239dc682477aba8a2c05ece7230cb2fa6.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b36f30ac5ee5d5214f4b1e2ac49f11889d58e71a">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-drive-8.4.0_e1d5cd132f1960d7953a1b6b439d7bcd160b959c.jar" />
+    </item>
+    <item
+        jar="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
+        <dex dex="/Users/Comet/Documents/developments/TestAWARE/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-analytics-8.4.0_3c6fed865161d7b5fecf827e69ab8a81da7da06b.jar" />
     </item>
 
 </items>
