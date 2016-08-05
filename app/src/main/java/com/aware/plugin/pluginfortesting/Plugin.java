@@ -120,7 +120,7 @@ public class Plugin extends Aware_Plugin {
 
         registerReceiver(wifiListener, wifi_filter);
         registerReceiver(locationListener, location_filter);
-        registerReceiver(accelerationListener, wifi_filter);
+        registerReceiver(accelerationListener, acceleration_filter);
 
         //Any active plugin/sensor shares its overall context using broadcasts
         sContext = new ContextProducer() {
@@ -293,6 +293,16 @@ public class Plugin extends Aware_Plugin {
             //variableReset();
             if (intent.getAction().equals(ACTION_AWARE_ACCELERATION)) {
                 Log.d("UNLOCK","ACTION_AWARE_ACCELERATION received");
+                ContentValues acc_data = intent.getParcelableExtra(EXTRA_DATA);
+                if (acc_data != null) {
+                    Log.d("UNLOCK", "ACC DATA AVAILABLE");
+                    double acc_0 = acc_data.getAsDouble("double_values_0");
+                    Log.d("UNLOCK","acc_0 = "+ acc_0);
+                } else {
+                    Log.d("UNLOCK", "ACC DATA UNAVAILABLE");
+
+                }
+
             }
         }
     }
