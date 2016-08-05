@@ -67,6 +67,9 @@ public class Plugin extends Aware_Plugin {
 
     public static final String EXTRA_DATA = "data";
 
+    //historical acceleration
+    public static final String ACTION_AWARE_ACCELERATION = "ACTION_AWARE_ACCELERATION";
+
     //context
     private static ContextProducer sContext;
 
@@ -111,8 +114,13 @@ public class Plugin extends Aware_Plugin {
         IntentFilter location_filter = new IntentFilter();
         location_filter.addAction(Locations.ACTION_AWARE_LOCATIONS);
 
+        //for historical acceleration data
+        IntentFilter acceleration_filter = new IntentFilter();
+        acceleration_filter.addAction(ACTION_AWARE_ACCELERATION);
+
         registerReceiver(wifiListener, wifi_filter);
         registerReceiver(locationListener, location_filter);
+        registerReceiver(accelerationListener, wifi_filter);
 
         //Any active plugin/sensor shares its overall context using broadcasts
         sContext = new ContextProducer() {
@@ -275,6 +283,21 @@ public class Plugin extends Aware_Plugin {
         }
     }
 
+    //historical acceleration
+    private static AccelerationListener accelerationListener = new AccelerationListener();
+
+    public static class AccelerationListener extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            //reset variables
+            //variableReset();
+            if (intent.getAction().equals(ACTION_AWARE_ACCELERATION)) {
+                Log.d("UNLOCK","ACTION_AWARE_ACCELERATION received");
+            }
+        }
+    }
+
+
     /*
     private static ApplicationListener applicationListener = new ApplicationListener();
 
@@ -350,6 +373,10 @@ public class Plugin extends Aware_Plugin {
 
         if(locationListener != null) {
             unregisterReceiver(locationListener);
+        }
+
+        if(accelerationListener != null) {
+            unregisterReceiver(accelerationListener);
         }
 
         //Stop plugin
