@@ -12,13 +12,53 @@ import android.net.Uri;
 import com.aware.Aware;
 import com.aware.Aware_Preferences;
 import com.aware.Applications;
+import com.aware.Locations;
+import com.aware.WiFi;
+import com.aware.providers.WiFi_Provider.WiFi_Data;
 import com.aware.providers.Applications_Provider.Applications_Foreground;
 import com.aware.utils.Aware_Plugin;
 import com.aware.plugin.pluginfortesting.Provider.Unlock_Monitor_Data;
 
+import com.aware.providers.WiFi_Provider;
 import com.aware.plugin.pluginfortesting.historicalProviders.Battery_Provider.Battery_Data;
+import com.aware.providers.Locations_Provider.Locations_Data;
 
 //Chu: add my two here
+
+//real-time: GPS, WIFI
+//historical: acceleration
+//simulated: plugin crash
+
+/*
+                            ContentValues crashData = new ContentValues();
+                            crashData.put(Applications_Crashes.TIMESTAMP, System.currentTimeMillis());
+                            crashData.put(Applications_Crashes.DEVICE_ID, Aware.getSetting(getApplicationContext(), Aware_Preferences.DEVICE_ID));
+                            crashData.put(Applications_Crashes.PACKAGE_NAME, error.processName);
+                            crashData.put(Applications_Crashes.APPLICATION_NAME, appName);
+                            crashData.put(Applications_Crashes.APPLICATION_VERSION, (pkgInfo != null) ? pkgInfo.versionCode : -1); //some prepackages don't have version codes...
+                            crashData.put(Applications_Crashes.ERROR_SHORT, error.shortMsg);
+
+                            String error_long = "";
+                            error_long += error.longMsg + "\nStack:\n";
+                            error_long += (error.stackTrace != null) ? error.stackTrace : "";
+
+                            crashData.put(Applications_Crashes.ERROR_LONG, error_long);
+                            crashData.put(Applications_Crashes.ERROR_CONDITION, error.condition);
+                            crashData.put(Applications_Crashes.IS_SYSTEM_APP, pkgInfo != null && isSystemPackage(pkgInfo));
+
+                            getContentResolver().insert(Applications_Crashes.CONTENT_URI, crashData);
+
+                            if (Aware.DEBUG) Log.d(Aware.TAG, "Crashed: " + crashData.toString());
+
+                            Intent crashed = new Intent(ACTION_AWARE_APPLICATIONS_CRASHES);
+                            crashed.putExtra(EXTRA_DATA, crashData);
+                            sendBroadcast(crashed);
+                        } catch (NameNotFoundException e) {
+                            e.printStackTrace();
+                        }
+                        //string   ACTION_AWARE_APPLICATIONS_CRASHES
+
+ */
 
 
 public class Plugin extends Aware_Plugin {
@@ -38,17 +78,41 @@ public class Plugin extends Aware_Plugin {
         TAG = "AWARE::"+getResources().getString(R.string.app_name);
 
 
-        Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_APPLICATIONS, true);
+        //Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_APPLICATIONS, true);
 
 
-        IntentFilter application_filter = new IntentFilter();
-        application_filter.addAction(Applications.ACTION_AWARE_APPLICATIONS_FOREGROUND);
+        //IntentFilter application_filter = new IntentFilter();
+        //application_filter.addAction(Applications.ACTION_AWARE_APPLICATIONS_FOREGROUND);
 
-        registerReceiver(applicationListener, application_filter);
+        //registerReceiver(applicationListener, application_filter);
 
         //Activate programmatically any sensors/plugins you need here
         //e.g., Aware.setSetting(this, Aware_Preferences.STATUS_ACCELEROMETER,true);
         //NOTE: if using plugin with dashboard, you can specify the sensors you'll use there.
+
+        //WIFI
+        Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_WIFI, true);
+        Aware.setSetting(getApplicationContext(), Aware_Preferences.FREQUENCY_WIFI, 60);
+
+        //Locations
+        Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_LOCATION_GPS, true);
+        Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_LOCATION_NETWORK, true);
+        Aware.setSetting(getApplicationContext(), Aware_Preferences.FREQUENCY_LOCATION_GPS, 180);
+        Aware.setSetting(getApplicationContext(), Aware_Preferences.FREQUENCY_LOCATION_NETWORK, 300);
+
+
+
+        //WIFI data
+        IntentFilter wifi_filter = new IntentFilter();
+        wifi_filter.addAction(WiFi.ACTION_AWARE_WIFI_NEW_DEVICE);
+
+
+        //Location data
+        IntentFilter location_filter = new IntentFilter();
+        location_filter.addAction(Locations.ACTION_AWARE_LOCATIONS);
+
+        registerReceiver(wifiListener, wifi_filter);
+        registerReceiver(locationListener, location_filter);
 
         //Any active plugin/sensor shares its overall context using broadcasts
         sContext = new ContextProducer() {
@@ -57,7 +121,6 @@ public class Plugin extends Aware_Plugin {
                 //Broadcast your context here
                 ContentValues data = new ContentValues();
                 data.put(Unlock_Monitor_Data.TIMESTAMP, System.currentTimeMillis());
-
 
                 //send to AWARE
                 Intent context_unlock = new Intent();
@@ -81,6 +144,8 @@ public class Plugin extends Aware_Plugin {
 
         Aware.startPlugin(this, "com.aware.plugin.pluginfortesting");
 
+        //startService(new Intent(MainActivity.this, ThreeFloatProcedure.class));
+
         /*
         if (Aware.getSetting(this, "study_id").length() == 0) {
             Intent joinStudy = new Intent(this, Aware_Preferences.StudyConfig.class);
@@ -89,6 +154,128 @@ public class Plugin extends Aware_Plugin {
         }*/
     }
 
+
+    //wifiListener
+    /**
+     * BroadcastReceiver that will receive wifi events from AWARE
+     */
+
+    private static WifiListener wifiListener = new WifiListener();
+
+    public static class WifiListener extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            //reset variables
+            //variableReset();
+            if (intent.getAction().equals(WiFi.ACTION_AWARE_WIFI_NEW_DEVICE)){
+                Log.d("UNLOCK","ACTION_AWARE_WIFI_NEW_DEVICE ");
+
+                if (intent.getAction().equals(WiFi.ACTION_AWARE_WIFI_NEW_DEVICE)){
+                    Cursor cursor = context.getContentResolver().query(WiFi_Provider.WiFi_Data.CONTENT_URI, null, null, null, WiFi_Provider.WiFi_Data.TIMESTAMP + " DESC LIMIT 1");
+                    if (cursor != null && cursor.moveToFirst()) {
+                        String wifi = cursor.getString(cursor.getColumnIndex(WiFi_Provider.WiFi_Data.SSID));
+                        Log.d("UNLOCK","wifi="+ wifi);
+                    }
+                    if (cursor != null && !cursor.isClosed())
+                    {
+                        cursor.close();
+                    }
+                }
+                /*
+                for(ScanResult ap : aps) {
+                    ContentValues rowData = new ContentValues();
+                    rowData.put(WiFi_Data.DEVICE_ID, Aware.getSetting(getApplicationContext(),Aware_Preferences.DEVICE_ID));
+                    rowData.put(WiFi_Data.TIMESTAMP, currentScan);
+                    rowData.put(WiFi_Data.BSSID, ap.BSSID);
+                    rowData.put(WiFi_Data.SSID, ap.SSID);
+                    rowData.put(WiFi_Data.SECURITY, ap.capabilities);
+                    rowData.put(WiFi_Data.FREQUENCY, ap.frequency);
+                    rowData.put(WiFi_Data.RSSI, ap.level);
+
+                    try {
+                        getContentResolver().insert(WiFi_Data.CONTENT_URI, rowData);
+                    } catch (SQLiteException e) {
+                        if(Aware.DEBUG) Log.d(TAG,e.getMessage());
+                    } catch (SQLException e) {
+                        if(Aware.DEBUG) Log.d(TAG,e.getMessage());
+                    }
+
+                    if( Aware.DEBUG ) Log.d(TAG, ACTION_AWARE_WIFI_NEW_DEVICE + ": " + rowData.toString());
+                    Intent detectedAP = new Intent(ACTION_AWARE_WIFI_NEW_DEVICE);
+                    detectedAP.putExtra(EXTRA_DATA, rowData);
+                    sendBroadcast(detectedAP);
+                }
+
+                 */
+            }
+
+
+            //sync data!
+            //BroadContext(context);
+        }
+    }
+
+    //locationListener
+    /**
+     * BroadcastReceiver that will receive location events from AWARE
+     */
+    private static LocationListener locationListener = new LocationListener();
+
+    public static class LocationListener extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            //reset variables
+            //variableReset();
+            if (intent.getAction().equals(Locations.ACTION_AWARE_LOCATIONS)){
+                Log.d("UNLOCK","Locations");
+
+                Cursor cursor = context.getContentResolver().query(Locations_Data.CONTENT_URI, null, null, null, Locations_Data.TIMESTAMP + " DESC LIMIT 1");
+                if (cursor != null && cursor.moveToFirst()) {
+                    double latitude = cursor.getDouble(cursor.getColumnIndex(Locations_Data.LATITUDE));
+                    double longitude = cursor.getDouble(cursor.getColumnIndex(Locations_Data.LONGITUDE));
+                    String locationSource = cursor.getString(cursor.getColumnIndex(Locations_Data.PROVIDER));
+                    Log.d("UNLOCK","latitude="+ latitude);
+                    Log.d("UNLOCK","longitude="+ longitude);
+                    Log.d("UNLOCK","locationSource="+ locationSource);
+                }
+                if (cursor != null && !cursor.isClosed())
+                {
+                    cursor.close();
+                }
+                /*
+
+        ContentValues rowData = new ContentValues();
+        rowData.put(Locations_Data.TIMESTAMP, System.currentTimeMillis());
+        rowData.put(Locations_Data.DEVICE_ID, Aware.getSetting(getApplicationContext(), Aware_Preferences.DEVICE_ID));
+        rowData.put(Locations_Data.LATITUDE, bestLocation.getLatitude());
+        rowData.put(Locations_Data.LONGITUDE, bestLocation.getLongitude());
+        rowData.put(Locations_Data.BEARING, bestLocation.getBearing());
+        rowData.put(Locations_Data.SPEED, bestLocation.getSpeed());
+        rowData.put(Locations_Data.ALTITUDE, bestLocation.getAltitude());
+        rowData.put(Locations_Data.PROVIDER, bestLocation.getProvider());
+        rowData.put(Locations_Data.ACCURACY, bestLocation.getAccuracy());
+
+        try {
+            getContentResolver().insert(Locations_Data.CONTENT_URI, rowData);
+        } catch (SQLiteException e) {
+            if (Aware.DEBUG) Log.d(TAG, e.getMessage());
+        } catch (SQLException e) {
+            if (Aware.DEBUG) Log.d(TAG, e.getMessage());
+        }
+
+        Intent locationEvent = new Intent(ACTION_AWARE_LOCATIONS);
+        sendBroadcast(locationEvent);
+
+                 */
+
+            }
+
+            //sync data!
+            //BroadContext(context);
+        }
+    }
+
+    /*
     private static ApplicationListener applicationListener = new ApplicationListener();
 
     public static class ApplicationListener extends BroadcastReceiver {
@@ -112,7 +299,6 @@ public class Plugin extends Aware_Plugin {
                     AppCursor.close();
                 }
 
-
                 Cursor cursor = context.getContentResolver().query(Uri.parse(Battery_Data.CONTENT_URI_STRING),
                         null, null, null, Battery_Data.TIMESTAMP + " DESC LIMIT 1");
 
@@ -133,7 +319,7 @@ public class Plugin extends Aware_Plugin {
 
         }
     }
-
+*/
     //This function gets called every 5 minutes by AWARE to make sure this plugin is still running.
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -146,14 +332,25 @@ public class Plugin extends Aware_Plugin {
     public void onDestroy() {
         super.onDestroy();
 
-        Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_APPLICATIONS, false);
+        //Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_APPLICATIONS, false);
 
-        if(applicationListener != null) {
-            unregisterReceiver(applicationListener);
+        //if(applicationListener != null) {
+        //    unregisterReceiver(applicationListener);
+        //}
+
+
+
+        Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_WIFI, false);
+        Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_LOCATION_GPS, false);
+        Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_LOCATION_NETWORK, false);
+
+        if(wifiListener != null) {
+            unregisterReceiver(wifiListener);
         }
 
-        //Deactivate any sensors/plugins you activated here
-        //e.g., Aware.setSetting(this, Aware_Preferences.STATUS_ACCELEROMETER, false);
+        if(locationListener != null) {
+            unregisterReceiver(locationListener);
+        }
 
         //Stop plugin
         Aware.stopPlugin(this, "com.aware.plugin.pluginfortesting");

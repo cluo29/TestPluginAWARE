@@ -17,6 +17,7 @@ import android.util.Log;
 import com.aware.Aware;
 import com.aware.utils.DatabaseHelper;
 
+// record test case and output
 
 /**
  * Created by Comet on 21/01/16.
