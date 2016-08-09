@@ -93,6 +93,7 @@ public class Plugin extends Aware_Plugin {
         //e.g., Aware.setSetting(this, Aware_Preferences.STATUS_ACCELEROMETER,true);
         //NOTE: if using plugin with dashboard, you can specify the sensors you'll use there.
 
+        /*
         //WIFI
         Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_WIFI, true);
         Aware.setSetting(getApplicationContext(), Aware_Preferences.FREQUENCY_WIFI, 60);
@@ -113,13 +114,14 @@ public class Plugin extends Aware_Plugin {
         //Location data
         IntentFilter location_filter = new IntentFilter();
         location_filter.addAction(Locations.ACTION_AWARE_LOCATIONS);
+*/
 
         //for historical acceleration data
         IntentFilter acceleration_filter = new IntentFilter();
         acceleration_filter.addAction(ACTION_AWARE_ACCELERATION);
 
-        registerReceiver(wifiListener, wifi_filter);
-        registerReceiver(locationListener, location_filter);
+        //registerReceiver(wifiListener, wifi_filter);
+        //registerReceiver(locationListener, location_filter);
         registerReceiver(accelerationListener, acceleration_filter);
 
         //Any active plugin/sensor shares its overall context using broadcasts
@@ -300,7 +302,6 @@ public class Plugin extends Aware_Plugin {
                     Log.d("UNLOCK","acc_0 = "+ acc_0);
                 } else {
                     Log.d("UNLOCK", "ACC DATA UNAVAILABLE");
-
                 }
 
             }
@@ -370,8 +371,6 @@ public class Plugin extends Aware_Plugin {
         //if(applicationListener != null) {
         //    unregisterReceiver(applicationListener);
         //}
-
-
 
         Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_WIFI, false);
         Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_LOCATION_GPS, false);
