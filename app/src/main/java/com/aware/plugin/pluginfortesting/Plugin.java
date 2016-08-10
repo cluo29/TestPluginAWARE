@@ -73,16 +73,13 @@ public class Plugin extends Aware_Plugin {
     //context
     private static ContextProducer sContext;
 
-
     @Override
     public void onCreate() {
         super.onCreate();
 
         TAG = "AWARE::"+getResources().getString(R.string.app_name);
 
-
         //Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_APPLICATIONS, true);
-
 
         //IntentFilter application_filter = new IntentFilter();
         //application_filter.addAction(Applications.ACTION_AWARE_APPLICATIONS_FOREGROUND);
@@ -104,18 +101,14 @@ public class Plugin extends Aware_Plugin {
         Aware.setSetting(getApplicationContext(), Aware_Preferences.FREQUENCY_LOCATION_GPS, 180);
         Aware.setSetting(getApplicationContext(), Aware_Preferences.FREQUENCY_LOCATION_NETWORK, 300);
 
-
-
         //WIFI data
         IntentFilter wifi_filter = new IntentFilter();
         wifi_filter.addAction(WiFi.ACTION_AWARE_WIFI_NEW_DEVICE);
-
 
         //Location data
         IntentFilter location_filter = new IntentFilter();
         location_filter.addAction(Locations.ACTION_AWARE_LOCATIONS);
 */
-
         //for historical acceleration data
         IntentFilter acceleration_filter = new IntentFilter();
         acceleration_filter.addAction(ACTION_AWARE_ACCELERATION);
@@ -191,6 +184,9 @@ public class Plugin extends Aware_Plugin {
                         cursor.close();
                     }
                 }
+
+                //Write the test result DB of that  
+
                 /*
                 for(ScanResult ap : aps) {
                     ContentValues rowData = new ContentValues();
