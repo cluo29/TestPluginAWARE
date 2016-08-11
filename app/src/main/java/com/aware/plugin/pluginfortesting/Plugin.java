@@ -330,7 +330,6 @@ public class Plugin extends Aware_Plugin {
                     //judge fall
 
                     //push alert
-                    //this is in ACP mood
                     alert.show();
                 } else {
                     Log.d("UNLOCK", "ACC DATA UNAVAILABLE");

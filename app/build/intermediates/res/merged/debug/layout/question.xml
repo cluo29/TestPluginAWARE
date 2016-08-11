@@ -12,7 +12,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:padding="10dp"
-        android:text="FallDetector"
+        android:text="Fall Detection"
         android:textSize="26dp"
         android:textAlignment="gravity"
         android:gravity="center_vertical|center_horizontal" />
@@ -20,23 +20,34 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stop"
+        android:text="HELP"
         android:id="@+id/button"
-        android:textSize="22dp"
-        android:layout_marginTop="200dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:textSize="32dp"
+        android:layout_marginTop="74dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginStart="25dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="A fall has been detected! If you don&apos;t need help, click on the button below to avoid alerting your contacts unnecessarily."
+        android:text="A fall has been detected! If you need help, click HELP button. Otherwise, please click CANCEL button."
         android:id="@+id/textView"
         android:layout_below="@+id/esm1_instructions1"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
         android:textSize="22dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CANCEL"
+        android:id="@+id/button2"
+        android:textSize="32dp"
+        android:layout_marginEnd="25dp"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignEnd="@+id/textView" />
 
 </RelativeLayout>
