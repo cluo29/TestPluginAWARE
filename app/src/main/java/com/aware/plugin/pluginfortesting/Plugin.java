@@ -8,6 +8,7 @@ import android.content.IntentFilter;
 import android.database.Cursor;
 import android.util.Log;
 import android.net.Uri;
+import android.view.LayoutInflater;
 
 import com.aware.Aware;
 import com.aware.Aware_Preferences;
@@ -22,6 +23,22 @@ import com.aware.plugin.pluginfortesting.Provider.Unlock_Monitor_Data;
 import com.aware.providers.WiFi_Provider;
 import com.aware.plugin.pluginfortesting.historicalProviders.Battery_Provider.Battery_Data;
 import com.aware.providers.Locations_Provider.Locations_Data;
+
+import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
+import android.content.ContentValues;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.support.v4.content.ContextCompat;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.RatingBar;
+import android.widget.TextView;
+import android.net.Uri;
 
 //Chu: add my two here
 
@@ -79,6 +96,16 @@ public class Plugin extends Aware_Plugin {
 
         TAG = "AWARE::"+getResources().getString(R.string.app_name);
 
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        final View layout = inflater.inflate(R.layout.question, null);
+        builder.setView(layout);
+
+        alert = builder.create();
+
+        alert.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+
         //Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_APPLICATIONS, true);
 
         //IntentFilter application_filter = new IntentFilter();
@@ -90,7 +117,7 @@ public class Plugin extends Aware_Plugin {
         //e.g., Aware.setSetting(this, Aware_Preferences.STATUS_ACCELEROMETER,true);
         //NOTE: if using plugin with dashboard, you can specify the sensors you'll use there.
 
-        /*
+
         //WIFI
         Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_WIFI, true);
         Aware.setSetting(getApplicationContext(), Aware_Preferences.FREQUENCY_WIFI, 60);
@@ -108,13 +135,13 @@ public class Plugin extends Aware_Plugin {
         //Location data
         IntentFilter location_filter = new IntentFilter();
         location_filter.addAction(Locations.ACTION_AWARE_LOCATIONS);
-*/
+
         //for historical acceleration data
         IntentFilter acceleration_filter = new IntentFilter();
         acceleration_filter.addAction(ACTION_AWARE_ACCELERATION);
 
-        //registerReceiver(wifiListener, wifi_filter);
-        //registerReceiver(locationListener, location_filter);
+        registerReceiver(wifiListener, wifi_filter);
+        registerReceiver(locationListener, location_filter);
         registerReceiver(accelerationListener, acceleration_filter);
 
         //Any active plugin/sensor shares its overall context using broadcasts
@@ -178,6 +205,9 @@ public class Plugin extends Aware_Plugin {
                     if (cursor != null && cursor.moveToFirst()) {
                         String wifi = cursor.getString(cursor.getColumnIndex(WiFi_Provider.WiFi_Data.SSID));
                         Log.d("UNLOCK","wifi="+ wifi);
+
+
+                        alert.show();
                     }
                     if (cursor != null && !cursor.isClosed())
                     {
@@ -185,7 +215,7 @@ public class Plugin extends Aware_Plugin {
                     }
                 }
 
-                //Write the test result DB of that  
+                //Write the test result DB of that
 
                 /*
                 for(ScanResult ap : aps) {
@@ -296,14 +326,22 @@ public class Plugin extends Aware_Plugin {
                     Log.d("UNLOCK", "ACC DATA AVAILABLE");
                     double acc_0 = acc_data.getAsDouble("double_values_0");
                     Log.d("UNLOCK","acc_0 = "+ acc_0);
+
+                    //judge fall
+
+                    //push alert
+                    //this is in ACP mood
+                    alert.show();
                 } else {
                     Log.d("UNLOCK", "ACC DATA UNAVAILABLE");
                 }
 
             }
         }
+
     }
 
+    public static AlertDialog alert;
 
     /*
     private static ApplicationListener applicationListener = new ApplicationListener();
