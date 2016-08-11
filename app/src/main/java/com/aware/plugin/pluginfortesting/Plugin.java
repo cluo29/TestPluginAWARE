@@ -85,7 +85,7 @@ public class Plugin extends Aware_Plugin {
     public static final String EXTRA_DATA = "data";
 
     //historical acceleration
-    public static final String ACTION_AWARE_ACCELERATION = "ACTION_AWARE_ACCELERATION";
+    //public static final String ACTION_AWARE_ACCELERATION = "ACTION_AWARE_ACCELERATION";
 
     //context
     private static ContextProducer sContext;
@@ -117,6 +117,10 @@ public class Plugin extends Aware_Plugin {
         //e.g., Aware.setSetting(this, Aware_Preferences.STATUS_ACCELEROMETER,true);
         //NOTE: if using plugin with dashboard, you can specify the sensors you'll use there.
 
+        //Real acc
+        Aware.setSetting(this, Aware_Preferences.STATUS_ACCELEROMETER,true);
+        Aware.setSetting(this, Aware_Preferences.FREQUENCY_ACCELEROMETER,20000);
+
 
         //WIFI
         Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_WIFI, true);
@@ -138,7 +142,9 @@ public class Plugin extends Aware_Plugin {
 
         //for historical acceleration data
         IntentFilter acceleration_filter = new IntentFilter();
-        acceleration_filter.addAction(ACTION_AWARE_ACCELERATION);
+        acceleration_filter.addAction("ACTION_AWARE_ACCELEROMETER");
+
+        Log.d("UNLOCK", "143");
 
         registerReceiver(wifiListener, wifi_filter);
         registerReceiver(locationListener, location_filter);
@@ -205,9 +211,6 @@ public class Plugin extends Aware_Plugin {
                     if (cursor != null && cursor.moveToFirst()) {
                         String wifi = cursor.getString(cursor.getColumnIndex(WiFi_Provider.WiFi_Data.SSID));
                         Log.d("UNLOCK","wifi="+ wifi);
-
-
-                        alert.show();
                     }
                     if (cursor != null && !cursor.isClosed())
                     {
@@ -319,7 +322,7 @@ public class Plugin extends Aware_Plugin {
         public void onReceive(Context context, Intent intent) {
             //reset variables
             //variableReset();
-            if (intent.getAction().equals(ACTION_AWARE_ACCELERATION)) {
+            if (intent.getAction().equals("ACTION_AWARE_ACCELEROMETER")) {
                 Log.d("UNLOCK","ACTION_AWARE_ACCELERATION received");
                 ContentValues acc_data = intent.getParcelableExtra(EXTRA_DATA);
                 if (acc_data != null) {
@@ -332,10 +335,11 @@ public class Plugin extends Aware_Plugin {
                     Log.d("UNLOCK","acc_2 = "+ acc_2);
                     //judge fall
                     //calculate G
-
-
-                    //push alert
-                    alert.show();
+                    if(1==0)
+                    {
+                        //push alert
+                        alert.show();
+                    }
                 } else {
                     Log.d("UNLOCK", "ACC DATA UNAVAILABLE");
                 }
@@ -400,11 +404,6 @@ public class Plugin extends Aware_Plugin {
     public void onDestroy() {
         super.onDestroy();
 
-        //Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_APPLICATIONS, false);
-
-        //if(applicationListener != null) {
-        //    unregisterReceiver(applicationListener);
-        //}
 
         Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_WIFI, false);
         Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_LOCATION_GPS, false);
