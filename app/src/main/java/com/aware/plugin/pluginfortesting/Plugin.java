@@ -325,9 +325,14 @@ public class Plugin extends Aware_Plugin {
                 if (acc_data != null) {
                     Log.d("UNLOCK", "ACC DATA AVAILABLE");
                     double acc_0 = acc_data.getAsDouble("double_values_0");
+                    double acc_1 = acc_data.getAsDouble("double_values_1");
+                    double acc_2 = acc_data.getAsDouble("double_values_2");
                     Log.d("UNLOCK","acc_0 = "+ acc_0);
-
+                    Log.d("UNLOCK","acc_1 = "+ acc_1);
+                    Log.d("UNLOCK","acc_2 = "+ acc_2);
                     //judge fall
+                    //calculate G
+
 
                     //push alert
                     alert.show();
@@ -379,11 +384,7 @@ public class Plugin extends Aware_Plugin {
                 {
                     cursor.close();
                 }
-
             }
-
-
-
         }
     }
 */
