@@ -118,17 +118,17 @@ public class Plugin extends Aware_Plugin {
         //NOTE: if using plugin with dashboard, you can specify the sensors you'll use there.
 
         //Real acc
-        Aware.setSetting(this, Aware_Preferences.STATUS_ACCELEROMETER,true);
+        Aware.setSetting(this, Aware_Preferences.STATUS_ACCELEROMETER,false);
         Aware.setSetting(this, Aware_Preferences.FREQUENCY_ACCELEROMETER,20000);
 
 
         //WIFI
-        Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_WIFI, true);
+        Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_WIFI, false);
         Aware.setSetting(getApplicationContext(), Aware_Preferences.FREQUENCY_WIFI, 60);
 
         //Locations
-        Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_LOCATION_GPS, true);
-        Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_LOCATION_NETWORK, true);
+        Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_LOCATION_GPS, false);
+        Aware.setSetting(getApplicationContext(), Aware_Preferences.STATUS_LOCATION_NETWORK, false);
         Aware.setSetting(getApplicationContext(), Aware_Preferences.FREQUENCY_LOCATION_GPS, 180);
         Aware.setSetting(getApplicationContext(), Aware_Preferences.FREQUENCY_LOCATION_NETWORK, 300);
 
@@ -144,11 +144,16 @@ public class Plugin extends Aware_Plugin {
         IntentFilter acceleration_filter = new IntentFilter();
         acceleration_filter.addAction("ACTION_AWARE_ACCELEROMETER");
 
+        //for historical light data
+        IntentFilter light_filter = new IntentFilter();
+        light_filter.addAction("ACTION_AWARE_LIGHT");
+
         Log.d("UNLOCK", "143");
 
         registerReceiver(wifiListener, wifi_filter);
         registerReceiver(locationListener, location_filter);
-        registerReceiver(accelerationListener, acceleration_filter);
+        //registerReceiver(accelerationListener, acceleration_filter);
+        registerReceiver(lightListener, light_filter);
 
         //Any active plugin/sensor shares its overall context using broadcasts
         sContext = new ContextProducer() {
@@ -349,6 +354,39 @@ public class Plugin extends Aware_Plugin {
 
     }
 
+    //historical acceleration
+    private static LightListener lightListener = new LightListener();
+
+    public static class LightListener extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            //reset variables
+            //variableReset();
+            if (intent.getAction().equals("ACTION_AWARE_LIGHT")) {
+                Log.d("UNLOCK","ACTION_AWARE_LIGHT received");
+                ContentValues light_data = intent.getParcelableExtra(EXTRA_DATA);
+                if (light_data != null) {
+                    Log.d("UNLOCK", "Light DATA AVAILABLE");
+                    double light_data_0 = light_data.getAsDouble("double_light_lux");
+
+                    Log.d("UNLOCK","light_data_0 = "+ light_data_0);
+
+                    //judge fall
+                    //calculate G
+                    if(1==0)
+                    {
+                        //push alert
+                        alert.show();
+                    }
+                } else {
+                    Log.d("UNLOCK", "Light DATA UNAVAILABLE");
+                }
+
+            }
+        }
+
+    }
+
     public static AlertDialog alert;
 
     /*
@@ -421,6 +459,9 @@ public class Plugin extends Aware_Plugin {
             unregisterReceiver(accelerationListener);
         }
 
+        if(lightListener != null) {
+            unregisterReceiver(lightListener);
+        }
         //Stop plugin
         Aware.stopPlugin(this, "com.aware.plugin.pluginfortesting");
     }
